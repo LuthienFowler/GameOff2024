@@ -19,5 +19,14 @@ offset_bottom = 434.0
 position = Vector2(470.5, 39)
 shape = SubResource("RectangleShape2D_ncypl")
 
-[node name="Player" parent="Ground/StaticBody2D" instance=ExtResource("1_o238h")]
-position = Vector2(67, -33)
+[node name="Player" parent="." instance=ExtResource("1_o238h")]
+position = Vector2(66, 323)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2.5, 2.5)
+limit_left = 10
+limit_top = 100
+limit_right = 900
+limit_bottom = 500
+editor_draw_limits = true
+editor_draw_drag_margin = true

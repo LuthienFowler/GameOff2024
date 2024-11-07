@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MovementPack" load_steps=2 format=3 uid="uid://ds486uxae8k5p"]
+
+[ext_resource type="Script" path="res://Player/MovementPacks/Base/MovementPacks.gd" id="1_w8uys"]
+
+[resource]
+script = ExtResource("1_w8uys")
+speed = 100.0
+acc = 1000.0
+frict = 1000.0
+run_speed = 200.0
