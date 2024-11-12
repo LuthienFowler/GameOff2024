@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 @export var mp: MovementPack
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+var current_anim: String
+
 func _physics_process(delta: float):
 	move(delta)
 
@@ -10,9 +14,13 @@ func move(delta):
 	
 	if input == Vector2.ZERO:
 		frict(delta)
+		current_anim = "idle"
+		animated_sprite_2d.flip_h = false
+		
 	elif input != Vector2.ZERO:
 		acc(delta, input)
 	
+	animated_sprite_2d.play(current_anim)
 	move_and_slide()
 
 func get_input():
@@ -20,13 +28,23 @@ func get_input():
 	
 	if Input.is_action_pressed("left"):
 		input_axis.x = -1
+		current_anim = "walk_side"
+		animated_sprite_2d.flip_h = true
+		
 	elif Input.is_action_pressed("right"):
 		input_axis.x = 1
+		current_anim = "walk_side"
+		animated_sprite_2d.flip_h = false
 
 	if Input.is_action_pressed("up"):
 		input_axis.y = -1
+		current_anim = "walk_back"
+		animated_sprite_2d.flip_h = false
+		
 	elif Input.is_action_pressed("down"):
 		input_axis.y = 1 
+		current_anim = "walk_foreward"
+		animated_sprite_2d.flip_h = false
 	
 	return input_axis
 
@@ -41,3 +59,6 @@ func acc(delta, direction):
 func frict(delta):
 	velocity.x = move_toward(velocity.x, 0, mp.frict * delta)
 	velocity.y = move_toward(velocity.y, 0, mp.frict * delta)
+
+func play_anims():
+	pass # Get this later plss 
