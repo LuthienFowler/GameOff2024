@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="GravityPack" load_steps=2 format=3 uid="uid://ck8i4d6p357fp"]
-
-[ext_resource type="Script" path="res://Player/GravityPacks/Base/GravityPack.gd" id="1_e3k2t"]
-
-[resource]
-script = ExtResource("1_e3k2t")
-jump_height = 100.0
-jump_time_to_peak = 0.3
-jump_time_to_descent = 0.2

@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cctivjh860fh6"]
+[gd_scene load_steps=5 format=3 uid="uid://cctivjh860fh6"]
 
 [ext_resource type="Texture2D" uid="uid://ctk8321wimy63" path="res://Player/TestSpritelolFixedLikeActuallyTheSecond.png" id="1_e3rk8"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_ueie2"]
 [ext_resource type="Resource" uid="uid://ds486uxae8k5p" path="res://Player/MovementPacks/default.tres" id="2_eo38y"]
-[ext_resource type="Resource" uid="uid://ck8i4d6p357fp" path="res://Player/GravityPacks/default.tres" id="3_ujma2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_867c1"]
 radius = 14.0
@@ -12,7 +11,6 @@ height = 50.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ueie2")
 mp = ExtResource("2_eo38y")
-gp = ExtResource("3_ujma2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4, -26)
