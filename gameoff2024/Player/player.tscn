@@ -1,12 +1,20 @@
-[gd_scene load_steps=19 format=3 uid="uid://cctivjh860fh6"]
+[gd_scene load_steps=21 format=3 uid="uid://cctivjh860fh6"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_ueie2"]
 [ext_resource type="Resource" uid="uid://ds486uxae8k5p" path="res://Player/MovementPacks/default.tres" id="2_eo38y"]
 [ext_resource type="Texture2D" uid="uid://cb30q3ph75ik2" path="res://Player/Sprites/HenrySprites.png" id="3_q3r2t"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t6hw"]
+atlas = ExtResource("3_q3r2t")
+region = Rect2(64, 128, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_alf87"]
 atlas = ExtResource("3_q3r2t")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2jp5"]
+atlas = ExtResource("3_q3r2t")
+region = Rect2(128, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gd2p"]
 atlas = ExtResource("3_q3r2t")
@@ -60,11 +68,27 @@ region = Rect2(192, 64, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5t6hw")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_alf87")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle_foreward",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2jp5")
+}],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -129,9 +153,7 @@ mp = ExtResource("2_eo38y")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -27)
 sprite_frames = SubResource("SpriteFrames_1dedf")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.298673
+animation = &"idle_foreward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
