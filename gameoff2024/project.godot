@@ -23,10 +23,13 @@ Global="*res://Autoload/global.gd"
 [dialogic]
 
 directories/dch_directory={
-"Henry": "res://Dialogue/Characters/Henry.dch"
+"Henry": "res://Dialogue/Characters/Henry.dch",
+"Stacy": "res://Dialogue/Characters/Stacy.dch"
 }
 directories/dtl_directory={
-"Debug1": "res://Dialogue/Timelines/Debug/Debug1.dtl"
+"Before": "res://Dialogue/Timelines/FrontDoor/Before.dtl",
+"Debug1": "res://Dialogue/Timelines/Debug/Debug1.dtl",
+"StacyGreetsHenry": "res://Dialogue/Timelines/FrontDoor/StacyGreetsHenry.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
