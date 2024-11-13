@@ -62,6 +62,10 @@ func frict(delta):
 	velocity.y = move_toward(velocity.y, 0, mp.frict * delta)
 
 func play_anims():
+	
+	if Global.current_game_state != Global.game_states.PLAY:
+		return
+	
 	var current_anim: String
 
 	if Input.is_action_pressed("down"):
@@ -90,6 +94,9 @@ func play_anims():
 	animated_sprite_2d.play(current_anim)
 
 func update_areas():
+	if Global.current_game_state != Global.game_states.PLAY:
+		return
+	
 	if Input.is_action_pressed("right"):
 		enable_area(right, left, down, up)
 	elif Input.is_action_pressed("left"):

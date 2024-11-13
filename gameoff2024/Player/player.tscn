@@ -154,8 +154,8 @@ script = ExtResource("1_ueie2")
 mp = ExtResource("2_eo38y")
 
 [node name="InteractionArea" type="Area2D" parent="." groups=["PlayerInteractionAreas"]]
-collision_layer = 0
-collision_mask = 4
+collision_layer = 2
+collision_mask = 0
 
 [node name="Down" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 10)
