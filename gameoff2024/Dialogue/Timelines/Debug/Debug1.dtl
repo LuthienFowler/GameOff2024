@@ -1,1 +1,9 @@
-
+[signal arg = "start"]
+Its a random wall in the middle of nowhere.
+Theres no trace of who made it,
+or how it got here.
+...
+The wall gives you an eerie feeling...
+Like you're looking at something you're not supposed to.
+(Get back to the original game, you snoop)
+[signal arg = "end"]

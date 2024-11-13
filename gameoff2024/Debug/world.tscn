@@ -1,8 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b03b6a55oippj"]
+[gd_scene load_steps=6 format=3 uid="uid://b03b6a55oippj"]
 
 [ext_resource type="PackedScene" uid="uid://cctivjh860fh6" path="res://Player/player.tscn" id="1_o238h"]
+[ext_resource type="PackedScene" uid="uid://hf46rddrhjos" path="res://Interactions/InteractionArea/interaction_area.tscn" id="1_tlc6j"]
+[ext_resource type="Script" path="res://Debug/dialogue_handler.gd" id="3_dhudw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncypl"]
+size = Vector2(941, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8pte"]
 size = Vector2(941, 78)
 
 [node name="World" type="Node2D"]
@@ -20,6 +25,13 @@ collision_mask = 0
 position = Vector2(470.5, 39)
 shape = SubResource("RectangleShape2D_ncypl")
 
+[node name="InteractionArea" parent="Ground" instance=ExtResource("1_tlc6j")]
+interactable_name = "wall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/InteractionArea"]
+position = Vector2(470.5, 39)
+shape = SubResource("RectangleShape2D_f8pte")
+
 [node name="Player" parent="." instance=ExtResource("1_o238h")]
 position = Vector2(66, 323)
 
@@ -31,3 +43,6 @@ limit_right = 900
 limit_bottom = 500
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="DialogueHandler" type="Node" parent="."]
+script = ExtResource("3_dhudw")
