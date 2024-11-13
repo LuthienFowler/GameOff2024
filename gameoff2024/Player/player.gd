@@ -6,8 +6,16 @@ extends CharacterBody2D
 
 var idle_anim = "foreward"
 
+@onready var down: CollisionShape2D = $InteractionArea/Down
+@onready var up: CollisionShape2D = $InteractionArea/Up
+@onready var left: CollisionShape2D = $InteractionArea/Left
+@onready var right: CollisionShape2D = $InteractionArea/Right
+
+
 func _physics_process(delta: float):
+	play_anims()
 	move(delta)
+	update_areas()
 
 func move(delta):
 	var input = get_input().normalized()
@@ -18,10 +26,13 @@ func move(delta):
 	elif input != Vector2.ZERO:
 		acc(delta, input)
 	
-	play_anims()
 	move_and_slide()
 
 func get_input():
+	
+	if Global.current_game_state != Global.game_states.PLAY:
+		return Vector2.ZERO
+	
 	var input_axis = Vector2.ZERO
 	
 	if Input.is_action_pressed("left"):
@@ -77,3 +88,20 @@ func play_anims():
 		current_anim = "idle_" + idle_anim
 	
 	animated_sprite_2d.play(current_anim)
+
+func update_areas():
+	if velocity.x > 0:
+		enable_area(right, left, down, up)
+	elif velocity.x < 0:
+		enable_area(left, right, down, up)
+	
+	if velocity.y > 0:
+		enable_area(down, up, left, right)
+	elif velocity.y < 0:
+		enable_area(up, down, left, right)
+
+func enable_area(enabled_area, disabled_area_1, disabled_area_2, disabled_area_3):
+	enabled_area.disabled = false
+	disabled_area_1.disabled = true 
+	disabled_area_2.disabled = true 
+	disabled_area_3.disabled = true 

@@ -14,6 +14,7 @@ offset_right = 940.0
 offset_bottom = 434.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground"]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/StaticBody2D"]
 position = Vector2(470.5, 39)
