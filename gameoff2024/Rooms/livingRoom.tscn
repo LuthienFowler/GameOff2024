@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://86yppwd6kfaw"]
+[gd_scene load_steps=6 format=3 uid="uid://86yppwd6kfaw"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_b4pk0"]
 [ext_resource type="Texture2D" uid="uid://dfsc6ari2e3mj" path="res://Assets/Environment/Living Room/Pictures/LivingRoom.png" id="2_d157j"]
 [ext_resource type="PackedScene" uid="uid://bqtgp3e0pdr7o" path="res://Assets/Environment/Living Room/Scenes/fire.tscn" id="3_jqkwv"]
+[ext_resource type="PackedScene" uid="uid://bidbpmpl8bhbk" path="res://Assets/Environment/Living Room/Scenes/Couch.tscn" id="4_2rerg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mm4wy"]
 size = Vector2(113, 1.75)
@@ -21,6 +22,9 @@ limit_left = 308
 limit_top = 68
 limit_right = 881
 limit_bottom = 373
+
+[node name="Couch1" parent="RoomContents" index="1" instance=ExtResource("4_2rerg")]
+position = Vector2(601, 216)
 
 [node name="Barriers" parent="." index="4"]
 collision_mask = 2
