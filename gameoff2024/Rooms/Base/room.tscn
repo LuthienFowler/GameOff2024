@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvk3hw7fqycxa"]
+
+[ext_resource type="PackedScene" uid="uid://cctivjh860fh6" path="res://Player/player.tscn" id="1_sco4e"]
+
+[node name="Room" type="Node2D"]
+
+[node name="Base" type="Sprite2D" parent="."]
+
+[node name="RoomContents" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="RoomContents" instance=ExtResource("1_sco4e")]
+position = Vector2(327, 237)
+
+[node name="Camera2D" type="Camera2D" parent="RoomContents/Player"]
+position = Vector2(0, -29)
+zoom = Vector2(2.5, 2.5)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.12
+drag_right_margin = 0.12
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="DialogueHandler" type="Node" parent="."]
+
+[node name="Barriers" type="StaticBody2D" parent="."]

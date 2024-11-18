@@ -62,11 +62,14 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://Assets/": "teal",
 "res://Autoload/": "red",
 "res://Debug/": "purple",
 "res://Dialogue/": "pink",
 "res://Interactions/": "green",
-"res://Player/": "blue"
+"res://Menus/": "gray",
+"res://Player/": "blue",
+"res://Rooms/": "orange"
 }
 
 [input]
@@ -118,7 +121,7 @@ dialogic_default_action={
 
 [layer_names]
 
-2d_physics/layer_1="Ground"
+2d_physics/layer_1="Barriers"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Interactables"
 

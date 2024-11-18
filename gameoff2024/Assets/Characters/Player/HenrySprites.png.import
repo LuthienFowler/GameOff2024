@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctk8321wimy63"
-path="res://.godot/imported/TestSpritelolFixedLikeActuallyTheSecond.png-9489978c94fcb38701b5c5e2fb82f1fd.ctex"
+uid="uid://cb30q3ph75ik2"
+path="res://.godot/imported/HenrySprites.png-736a6c22f8784d972cde43a432a7d924.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/TestSpritelolFixedLikeActuallyTheSecond.png"
-dest_files=["res://.godot/imported/TestSpritelolFixedLikeActuallyTheSecond.png-9489978c94fcb38701b5c5e2fb82f1fd.ctex"]
+source_file="res://Assets/Characters/Player/HenrySprites.png"
+dest_files=["res://.godot/imported/HenrySprites.png-736a6c22f8784d972cde43a432a7d924.ctex"]
 
 [params]
 
