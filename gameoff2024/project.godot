@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Interact="*res://Autoload/interact.gd"
 Global="*res://Autoload/global.gd"
+RoomTransitionHandler="*res://Autoload/room_transition_handler.gd"
+TransitionAnims="*res://Autoload/transition_anims.tscn"
 
 [dialogic]
 
