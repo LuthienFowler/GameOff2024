@@ -1,18 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://86yppwd6kfaw"]
+[gd_scene load_steps=5 format=3 uid="uid://86yppwd6kfaw"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_b4pk0"]
-[ext_resource type="Texture2D" uid="uid://dfsc6ari2e3mj" path="res://Assets/Environment/Living Room/Pictures/LivingRoom.png" id="2_d157j"]
+[ext_resource type="Texture2D" uid="uid://dxwjq1vvpfulh" path="res://Assets/Environment/Bases/Downstairs/LivingRoomBase.png" id="2_4s26w"]
 [ext_resource type="PackedScene" uid="uid://bqtgp3e0pdr7o" path="res://Assets/Environment/Living Room/Scenes/fire.tscn" id="3_jqkwv"]
 [ext_resource type="PackedScene" uid="uid://bidbpmpl8bhbk" path="res://Assets/Environment/Living Room/Scenes/Couch.tscn" id="4_2rerg"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm4wy"]
-size = Vector2(113, 1.75)
 
 [node name="Room" instance=ExtResource("1_b4pk0")]
 
 [node name="Base" parent="." index="0"]
-position = Vector2(727, 275)
-texture = ExtResource("2_d157j")
+position = Vector2(559, 265)
+texture = ExtResource("2_4s26w")
 
 [node name="Fire" parent="." index="1" instance=ExtResource("3_jqkwv")]
 position = Vector2(603, 134)
@@ -20,8 +17,8 @@ position = Vector2(603, 134)
 [node name="Camera2D" parent="RoomContents/Player" index="3"]
 limit_left = 308
 limit_top = 68
-limit_right = 881
-limit_bottom = 373
+limit_right = 809
+limit_bottom = 402
 
 [node name="Couch1" parent="RoomContents" index="1" instance=ExtResource("4_2rerg")]
 position = Vector2(601, 216)
@@ -30,8 +27,4 @@ position = Vector2(601, 216)
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
-polygon = PackedVector2Array(308, 212, 442, 212, 442, 166, 760, 166, 760, 216, 881, 216, 881, 274, 760, 274, 760, 373, 442, 373, 442, 262, 308, 262, 308, 213, 287, 451, 1013, 411, 931, 47, 286, 134)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers" index="1"]
-position = Vector2(703.5, 317.875)
-shape = SubResource("RectangleShape2D_mm4wy")
+polygon = PackedVector2Array(309, 212, 442, 212, 442, 166, 760, 166, 760, 216, 809, 216, 809, 280, 760, 280, 760, 402, 687, 402, 687, 373, 442, 373, 442, 262, 309, 262, 309, 213, 290, 425, 904, 445, 885, 48, 300, 61)

@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://bidbpmpl8bhbk"]
 
-[ext_resource type="Texture2D" uid="uid://c3qivogsgewoy" path="res://Assets/Environment/Living Room/Pictures/LivingRoomCouch.png" id="1_tq2dl"]
+[ext_resource type="Texture2D" uid="uid://dayxetfsfa45b" path="res://Assets/Environment/Living Room/Pictures/LivingRoomCouchActuallyFixed.png" id="1_youv6"]
 
 [node name="Couch1" type="Sprite2D"]
-texture = ExtResource("1_tq2dl")
+texture = ExtResource("1_youv6")
 offset = Vector2(0, -34)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(0, -34)
-polygon = PackedVector2Array(-81, 32, -78, 34, 79, 34, 82, 32, 82, 6, -81, 6)
+polygon = PackedVector2Array(-81, 13, -81, 32, -78, 34, 79, 34, 82, 32, 82, 12, 77, 7, -76, 7)
