@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://86yppwd6kfaw"]
+[gd_scene load_steps=9 format=3 uid="uid://86yppwd6kfaw"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_2b02h"]
 [ext_resource type="Script" path="res://Rooms/zDownstairs/Living Room/living_room.gd" id="2_032g0"]
@@ -10,6 +10,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3u5ol"]
 radius = 11.0
 height = 82.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8s54"]
+radius = 17.0
+height = 78.0
 
 [node name="Room" instance=ExtResource("1_2b02h")]
 script = ExtResource("2_032g0")
@@ -40,12 +44,21 @@ collision_mask = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
 polygon = PackedVector2Array(309, 212, 442, 212, 442, 166, 760, 166, 760, 216, 809, 216, 809, 280, 760, 280, 760, 402, 687, 402, 687, 373, 442, 373, 442, 262, 309, 262, 309, 213, 290, 425, 904, 445, 885, 48, 300, 61)
 
-[node name="TransitionArea" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("6_sdu6c")]
+[node name="ToTheLounge" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("6_sdu6c")]
 position = Vector2(730, 387)
-next_room_path = "res://Rooms/zDownstairs/loungeRoom.tscn"
+next_room_path = "res://Rooms/zDownstairs/Lounge/loungeRoom.tscn"
 current_room = "living_room"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/TransitionArea" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/ToTheLounge" index="0"]
 position = Vector2(-7, 4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3u5ol")
+
+[node name="ToTheDiningRoom" parent="AllRoomTransitionAreas" index="1" instance=ExtResource("6_sdu6c")]
+position = Vector2(795, 244)
+next_room_path = "res://Rooms/zDownstairs/DiningRoom/diningRoom.tscn"
+current_room = "living_room"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/ToTheDiningRoom" index="0"]
+position = Vector2(9, 3)
+shape = SubResource("CapsuleShape2D_u8s54")

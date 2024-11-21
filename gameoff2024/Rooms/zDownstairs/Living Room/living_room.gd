@@ -7,3 +7,7 @@ func _ready():
 		"lounge":
 			player.position.x = 724
 			player.position.y = 369
+			
+		"dining_room":
+			player.position.x = 762
+			player.position.y = 249

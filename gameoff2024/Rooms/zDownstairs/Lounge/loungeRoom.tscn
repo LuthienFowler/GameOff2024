@@ -1,18 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://botxyjlpibpta"]
 
-[ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_ruldu"]
-[ext_resource type="Texture2D" uid="uid://cgepgjckrd0v7" path="res://Assets/Environment/Bases/Downstairs/LoungeRoomBase.png" id="2_13g0i"]
-[ext_resource type="PackedScene" uid="uid://bu7n4wdcskf8c" path="res://Rooms/RoomTransitionArea/transition_area.tscn" id="3_50u8v"]
+[ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_7vev0"]
+[ext_resource type="Texture2D" uid="uid://cgepgjckrd0v7" path="res://Assets/Environment/Bases/Downstairs/LoungeRoomBase.png" id="2_1la32"]
+[ext_resource type="PackedScene" uid="uid://bu7n4wdcskf8c" path="res://Rooms/RoomTransitionArea/transition_area.tscn" id="3_82qen"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wffv"]
 radius = 16.0
 height = 98.0
 
-[node name="Room" instance=ExtResource("1_ruldu")]
+[node name="Room" instance=ExtResource("1_7vev0")]
 
 [node name="Base" parent="." index="0"]
 position = Vector2(355, 505)
-texture = ExtResource("2_13g0i")
+texture = ExtResource("2_1la32")
 
 [node name="Player" parent="RoomContents" index="0"]
 position = Vector2(328, 288)
@@ -26,7 +26,7 @@ limit_bottom = 750
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
 polygon = PackedVector2Array(291, 201, 364, 201, 364, 333, 455, 333, 455, 494, 657, 494, 657, 576, 720, 576, 720, 641, 657, 641, 657, 717, 200, 717, 200, 776, 132, 776, 132, 717, 84, 717, 84, 657, 33, 657, 33, 580, 84, 580, 84, 333, 291, 333, 291, 202, -22, 356, -3, 816, 836, 816, 781, 258, 317, 135)
 
-[node name="TransitionArea" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("3_50u8v")]
+[node name="TransitionArea" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("3_82qen")]
 position = Vector2(328, 205)
 next_room_path = "res://Rooms/zDownstairs/Living Room/livingRoom.tscn"
 current_room = "lounge"
