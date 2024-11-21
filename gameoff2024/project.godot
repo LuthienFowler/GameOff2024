@@ -20,6 +20,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Interact="*res://Autoload/interact.gd"
 Global="*res://Autoload/global.gd"
 RoomTransitions="*res://Autoload/room_transitions.gd"
+TransitionAnims="*res://Autoload/Anims/TransitionAnims.tscn"
 
 [dialogic]
 
