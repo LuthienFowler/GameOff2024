@@ -1,6 +1,6 @@
 extends Node
 
-enum game_states {MAIN_MENU, GAME_MENU, PLAY, DIALOGUE}
+enum game_states {GAME_MENU, PLAY, DIALOGUE}
 
 var current_game_state = game_states.PLAY
 

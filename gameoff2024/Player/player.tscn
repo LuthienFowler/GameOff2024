@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://cctivjh860fh6"]
+[gd_scene load_steps=24 format=3 uid="uid://cctivjh860fh6"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_ueie2"]
 [ext_resource type="Resource" uid="uid://ds486uxae8k5p" path="res://Player/MovementPacks/default.tres" id="2_eo38y"]
 [ext_resource type="Texture2D" uid="uid://cb30q3ph75ik2" path="res://Assets/Characters/Player/HenrySprites.png" id="3_q3r2t"]
+[ext_resource type="PackedScene" uid="uid://8hax45be61qv" path="res://Menus/GameMenu/game_menu.tscn" id="4_cpqld"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o52f7"]
 
@@ -202,3 +203,6 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionArea"]
 position = Vector2(0, -28)
 shape = SubResource("CapsuleShape2D_2io14")
+
+[node name="GameMenu" parent="." instance=ExtResource("4_cpqld")]
+visible = false
