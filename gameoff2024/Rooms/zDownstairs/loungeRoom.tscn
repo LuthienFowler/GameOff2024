@@ -28,7 +28,8 @@ polygon = PackedVector2Array(291, 201, 364, 201, 364, 333, 455, 333, 455, 494, 6
 
 [node name="TransitionArea" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("3_50u8v")]
 position = Vector2(328, 205)
-next_room_path = "res://Rooms/zDownstairs/livingRoom.tscn"
+next_room_path = "res://Rooms/zDownstairs/Living Room/livingRoom.tscn"
+current_room = "lounge"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/TransitionArea" index="0"]
 rotation = 1.5708
