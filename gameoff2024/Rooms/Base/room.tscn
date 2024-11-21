@@ -25,3 +25,5 @@ editor_draw_drag_margin = true
 [node name="DialogueHandler" type="Node" parent="."]
 
 [node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="AllRoomTransitionAreas" type="Node2D" parent="."]

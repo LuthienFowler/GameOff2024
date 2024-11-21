@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://bu7n4wdcskf8c"]
+[gd_scene load_steps=2 format=3 uid="uid://bu7n4wdcskf8c"]
+
+[ext_resource type="Script" path="res://Rooms/RoomTransitionArea/transition_area.gd" id="1_bwcpd"]
 
 [node name="TransitionArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_bwcpd")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
