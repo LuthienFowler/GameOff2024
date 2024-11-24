@@ -13,6 +13,7 @@ config_version=5
 config/name="GameOff2024"
 run/main_scene="res://Menus/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -32,11 +33,14 @@ directories/dch_directory={
 directories/dtl_directory={
 "Before": "res://Dialogue/Timelines/FrontDoor/Before.dtl",
 "Debug1": "res://Dialogue/Timelines/Debug/Debug1.dtl",
-"StacyGreetsHenry": "res://Dialogue/Timelines/FrontDoor/StacyGreetsHenry.dtl"
+"StacyGreetsHenry": "res://Dialogue/Timelines/FrontDoor/StacyGreetsHenry.dtl",
+"empty_book_shelves_1": "res://Dialogue/Timelines/LivingRoom/empty_book_shelves_1.dtl",
+"fire_place_dialogue_1": "res://Dialogue/Timelines/LivingRoom/fire_place_dialogue_1.dtl",
+"suspicious_plant_1": "res://Dialogue/Timelines/Lounge/suspicious_plant_1.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://Dialogue/Styles/new_style.tres"]
+layout/default_style="res://Dialogue/Styles/new_style.tres"
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -141,3 +145,4 @@ dialogic_default_action={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.127133, 0.0629735, 0.0236879, 1)

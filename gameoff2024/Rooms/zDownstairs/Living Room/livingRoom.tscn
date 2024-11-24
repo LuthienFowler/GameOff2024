@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://86yppwd6kfaw"]
+[gd_scene load_steps=12 format=3 uid="uid://86yppwd6kfaw"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_2b02h"]
 [ext_resource type="Script" path="res://Rooms/zDownstairs/Living Room/living_room.gd" id="2_032g0"]
 [ext_resource type="Texture2D" uid="uid://dxwjq1vvpfulh" path="res://Assets/Environment/Bases/Downstairs/LivingRoomBase.png" id="3_omrkb"]
 [ext_resource type="PackedScene" uid="uid://bqtgp3e0pdr7o" path="res://Assets/Environment/Living Room/Scenes/fire.tscn" id="4_8sqml"]
 [ext_resource type="PackedScene" uid="uid://bidbpmpl8bhbk" path="res://Assets/Environment/Living Room/Scenes/Couch.tscn" id="5_i7hhe"]
+[ext_resource type="Script" path="res://Rooms/zDownstairs/Living Room/dialogue_handler.gd" id="6_ny47y"]
 [ext_resource type="PackedScene" uid="uid://bu7n4wdcskf8c" path="res://Rooms/RoomTransitionArea/transition_area.tscn" id="6_sdu6c"]
+[ext_resource type="PackedScene" uid="uid://hf46rddrhjos" path="res://Interactions/InteractionArea/interaction_area.tscn" id="7_kstpm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3u5ol"]
 radius = 11.0
@@ -14,6 +16,9 @@ height = 82.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8s54"]
 radius = 17.0
 height = 78.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvver"]
+size = Vector2(68, 20)
 
 [node name="Room" instance=ExtResource("1_2b02h")]
 script = ExtResource("2_032g0")
@@ -26,10 +31,9 @@ texture = ExtResource("3_omrkb")
 position = Vector2(603, 134)
 
 [node name="Player" parent="RoomContents" index="0"]
-unique_name_in_owner = true
 position = Vector2(334, 240)
 
-[node name="Camera2D" parent="RoomContents/Player" index="4"]
+[node name="Camera2D" parent="RoomContents/Player" index="5"]
 limit_left = 308
 limit_top = 68
 limit_right = 809
@@ -37,6 +41,9 @@ limit_bottom = 402
 
 [node name="Couch1" parent="RoomContents" index="1" instance=ExtResource("5_i7hhe")]
 position = Vector2(601, 216)
+
+[node name="DialogueHandler" parent="." index="3"]
+script = ExtResource("6_ny47y")
 
 [node name="Barriers" parent="." index="4"]
 collision_mask = 2
@@ -62,3 +69,11 @@ current_room = "living_room"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/ToTheDiningRoom" index="0"]
 position = Vector2(9, 3)
 shape = SubResource("CapsuleShape2D_u8s54")
+
+[node name="FirePlace" parent="InteractionAreas" index="0" instance=ExtResource("7_kstpm")]
+position = Vector2(596, 139)
+interactable_name = "fire_place"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionAreas/FirePlace" index="0"]
+position = Vector2(5, 13)
+shape = SubResource("RectangleShape2D_hvver")

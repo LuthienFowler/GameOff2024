@@ -1,14 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://botxyjlpibpta"]
+[gd_scene load_steps=12 format=3 uid="uid://botxyjlpibpta"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_7vev0"]
 [ext_resource type="Texture2D" uid="uid://cgepgjckrd0v7" path="res://Assets/Environment/Bases/Downstairs/LoungeRoomBase.png" id="2_1la32"]
+[ext_resource type="Script" path="res://Rooms/zDownstairs/Lounge/lounge_room.gd" id="2_w005w"]
 [ext_resource type="PackedScene" uid="uid://bu7n4wdcskf8c" path="res://Rooms/RoomTransitionArea/transition_area.tscn" id="3_82qen"]
+[ext_resource type="PackedScene" uid="uid://c5ykor1quhy6x" path="res://Assets/Environment/Lounge/Scenes/plant_1.tscn" id="5_6sdo4"]
+[ext_resource type="PackedScene" uid="uid://cjf3f53nmjwg5" path="res://Assets/Environment/Lounge/Scenes/lounge_couch.tscn" id="5_eq67v"]
+[ext_resource type="PackedScene" uid="uid://dseif7wapnnt5" path="res://Assets/Environment/Lounge/Scenes/plant_2.tscn" id="6_41xki"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wffv"]
 radius = 16.0
 height = 98.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itvmp"]
+radius = 11.0
+height = 106.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sm1gg"]
+radius = 17.0
+height = 102.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfh7o"]
+radius = 14.0
+height = 90.0
+
 [node name="Room" instance=ExtResource("1_7vev0")]
+script = ExtResource("2_w005w")
 
 [node name="Base" parent="." index="0"]
 position = Vector2(355, 505)
@@ -17,20 +34,61 @@ texture = ExtResource("2_1la32")
 [node name="Player" parent="RoomContents" index="0"]
 position = Vector2(328, 288)
 
-[node name="Camera2D" parent="RoomContents/Player" index="4"]
+[node name="Camera2D" parent="RoomContents/Player" index="5"]
 limit_left = 50
 limit_top = 220
 limit_right = 700
 limit_bottom = 750
 
+[node name="LoungeCouch" parent="RoomContents" index="1" instance=ExtResource("5_eq67v")]
+position = Vector2(179, 313)
+
+[node name="Plant1" parent="RoomContents" index="2" instance=ExtResource("5_6sdo4")]
+position = Vector2(436, 340)
+
+[node name="Plant2" parent="RoomContents" index="3" instance=ExtResource("6_41xki")]
+position = Vector2(636, 501)
+
+[node name="Plant3" parent="RoomContents" index="4" instance=ExtResource("6_41xki")]
+position = Vector2(103, 424)
+
+[node name="suspicious_plant" parent="RoomContents" index="5" instance=ExtResource("5_6sdo4")]
+position = Vector2(294, 526)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
 polygon = PackedVector2Array(291, 201, 364, 201, 364, 333, 455, 333, 455, 494, 657, 494, 657, 576, 720, 576, 720, 641, 657, 641, 657, 717, 200, 717, 200, 776, 132, 776, 132, 717, 84, 717, 84, 657, 33, 657, 33, 580, 84, 580, 84, 333, 291, 333, 291, 202, -22, 356, -3, 816, 836, 816, 781, 258, 317, 135)
 
-[node name="TransitionArea" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("3_82qen")]
+[node name="LivingRoom" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("3_82qen")]
 position = Vector2(328, 205)
 next_room_path = "res://Rooms/zDownstairs/Living Room/livingRoom.tscn"
 current_room = "lounge"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/TransitionArea" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/LivingRoom" index="0"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_5wffv")
+
+[node name="RonsStudy" parent="AllRoomTransitionAreas" index="1" instance=ExtResource("3_82qen")]
+position = Vector2(159, 764)
+next_room_path = "res://Rooms/zDownstairs/Rons Study/ronsStudy.tscn"
+current_room = "lounge"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/RonsStudy" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_itvmp")
+
+[node name="SamanthasStudy" parent="AllRoomTransitionAreas" index="2" instance=ExtResource("3_82qen")]
+position = Vector2(38, 615)
+next_room_path = "res://Rooms/zDownstairs/Samanthas Study/SamanthasStudy.tscn"
+current_room = "lounge"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/SamanthasStudy" index="0"]
+shape = SubResource("CapsuleShape2D_sm1gg")
+
+[node name="Bathroom" parent="AllRoomTransitionAreas" index="3" instance=ExtResource("3_82qen")]
+position = Vector2(698, 603)
+next_room_path = "res://Rooms/zDownstairs/Bathroom/bathroom.tscn"
+current_room = "lounge"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/Bathroom" index="0"]
+position = Vector2(12, 4)
+shape = SubResource("CapsuleShape2D_gfh7o")

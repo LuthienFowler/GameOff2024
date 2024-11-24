@@ -10,6 +10,7 @@
 y_sort_enabled = true
 
 [node name="Player" parent="RoomContents" instance=ExtResource("1_sco4e")]
+unique_name_in_owner = true
 position = Vector2(327, 237)
 
 [node name="Camera2D" type="Camera2D" parent="RoomContents/Player"]
@@ -27,3 +28,5 @@ editor_draw_drag_margin = true
 [node name="Barriers" type="StaticBody2D" parent="."]
 
 [node name="AllRoomTransitionAreas" type="Node2D" parent="."]
+
+[node name="InteractionAreas" type="Node2D" parent="."]

@@ -1,5 +1,8 @@
 extends Node
 
+# Hehehe now for the sacriligious shit
+var fire_place_interactions = 0
+
 signal interacted(interactable_name)
 
 func _ready() -> void:

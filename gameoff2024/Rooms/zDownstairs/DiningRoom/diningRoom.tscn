@@ -16,7 +16,7 @@ texture = ExtResource("2_fgin7")
 
 [node name="Camera2D" parent="RoomContents/Player" index="5"]
 limit_left = 280
-limit_top = 100
+limit_top = 40
 limit_right = 750
 limit_bottom = 356
 

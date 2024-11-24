@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmqbu2htfhon1"]
+
+[ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_uw1iv"]
+[ext_resource type="Texture2D" uid="uid://b1yywn7yiryav" path="res://Assets/Environment/Bases/Downstairs/RecordingRoomBase.png" id="2_fvswh"]
+[ext_resource type="PackedScene" uid="uid://bu7n4wdcskf8c" path="res://Rooms/RoomTransitionArea/transition_area.tscn" id="3_00ka2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6o07w"]
+radius = 15.0
+height = 108.0
+
+[node name="Room" instance=ExtResource("1_uw1iv")]
+
+[node name="Base" parent="." index="0"]
+position = Vector2(447, 326)
+texture = ExtResource("2_fvswh")
+
+[node name="Player" parent="RoomContents" index="0"]
+position = Vector2(630, 383)
+
+[node name="Camera2D" parent="RoomContents/Player" index="5"]
+limit_left = 233
+limit_top = 157
+limit_right = 680
+limit_bottom = 582
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
+polygon = PackedVector2Array(704, 347, 704, 423, 600, 423, 600, 582, 233, 582, 233, 157, 600, 157, 600, 346, 704, 346, 575, 34, 100, 179, 212, 699, 740, 608, 747, 347)
+
+[node name="TransitionArea" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("3_00ka2")]
+position = Vector2(694, 381)
+next_room_path = "res://Rooms/zDownstairs/Lounge/loungeRoom.tscn"
+current_room = "samanthas_study"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/TransitionArea" index="0"]
+shape = SubResource("CapsuleShape2D_6o07w")
