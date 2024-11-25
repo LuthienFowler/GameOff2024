@@ -7,6 +7,8 @@ func interact(interactable_name) -> void:
 	match interactable_name:
 		"sus_plant":
 			sus_plant_dialogue()
+		"lounge_couch":
+			lounge_couch_dialogue()
 
 func sus_plant_dialogue() -> void:
 	if Interact.sus_plant_interactions == 0:
@@ -17,3 +19,6 @@ func sus_plant_dialogue() -> void:
 		Interact.interact("suspicious_plant_3")
 	
 	Interact.sus_plant_interactions += 1
+
+func lounge_couch_dialogue() -> void:
+	Interact.interact("lounge_couch_dialogue")
