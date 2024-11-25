@@ -34,9 +34,14 @@ directories/dtl_directory={
 "Before": "res://Dialogue/Timelines/FrontDoor/Before.dtl",
 "Debug1": "res://Dialogue/Timelines/Debug/Debug1.dtl",
 "StacyGreetsHenry": "res://Dialogue/Timelines/FrontDoor/StacyGreetsHenry.dtl",
+"couch_dialogue_1": "res://Dialogue/Timelines/LivingRoom/couch_dialogue_1.dtl",
+"couch_dialogue_2": "res://Dialogue/Timelines/LivingRoom/couch_dialogue_2.dtl",
 "empty_book_shelves_1": "res://Dialogue/Timelines/LivingRoom/empty_book_shelves_1.dtl",
+"empty_book_shelves_2": "res://Dialogue/Timelines/LivingRoom/empty_book_shelves_2.dtl",
 "fire_place_dialogue_1": "res://Dialogue/Timelines/LivingRoom/fire_place_dialogue_1.dtl",
-"suspicious_plant_1": "res://Dialogue/Timelines/Lounge/suspicious_plant_1.dtl"
+"suspicious_plant_1": "res://Dialogue/Timelines/Lounge/suspicious_plant_1.dtl",
+"suspicious_plant_2": "res://Dialogue/Timelines/Lounge/suspicious_plant_2.dtl",
+"suspicious_plant_3": "res://Dialogue/Timelines/Lounge/suspicious_plant_3.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogue/Styles/new_style.tres"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://botxyjlpibpta"]
+[gd_scene load_steps=14 format=3 uid="uid://botxyjlpibpta"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_7vev0"]
 [ext_resource type="Texture2D" uid="uid://cgepgjckrd0v7" path="res://Assets/Environment/Bases/Downstairs/LoungeRoomBase.png" id="2_1la32"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c5ykor1quhy6x" path="res://Assets/Environment/Lounge/Scenes/plant_1.tscn" id="5_6sdo4"]
 [ext_resource type="PackedScene" uid="uid://cjf3f53nmjwg5" path="res://Assets/Environment/Lounge/Scenes/lounge_couch.tscn" id="5_eq67v"]
 [ext_resource type="PackedScene" uid="uid://dseif7wapnnt5" path="res://Assets/Environment/Lounge/Scenes/plant_2.tscn" id="6_41xki"]
+[ext_resource type="Script" path="res://Rooms/zDownstairs/Lounge/dialogue_handler.gd" id="7_p0h1a"]
+[ext_resource type="PackedScene" uid="uid://hf46rddrhjos" path="res://Interactions/InteractionArea/interaction_area.tscn" id="8_xlcpq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wffv"]
 radius = 16.0
@@ -55,6 +57,9 @@ position = Vector2(103, 424)
 [node name="suspicious_plant" parent="RoomContents" index="5" instance=ExtResource("5_6sdo4")]
 position = Vector2(294, 526)
 
+[node name="DialogueHandler" parent="." index="2"]
+script = ExtResource("7_p0h1a")
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
 polygon = PackedVector2Array(291, 201, 364, 201, 364, 333, 455, 333, 455, 494, 657, 494, 657, 576, 720, 576, 720, 641, 657, 641, 657, 717, 200, 717, 200, 776, 132, 776, 132, 717, 84, 717, 84, 657, 33, 657, 33, 580, 84, 580, 84, 333, 291, 333, 291, 202, -22, 356, -3, 816, 836, 816, 781, 258, 317, 135)
 
@@ -92,3 +97,10 @@ current_room = "lounge"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/Bathroom" index="0"]
 position = Vector2(12, 4)
 shape = SubResource("CapsuleShape2D_gfh7o")
+
+[node name="suspicious_plant" parent="InteractionAreas" index="0" instance=ExtResource("8_xlcpq")]
+position = Vector2(290, 517)
+interactable_name = "sus_plant"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/suspicious_plant" index="0"]
+polygon = PackedVector2Array(-2, -2, 8, -2, 8, 0, 9, 0, 11, 2, 11, 6, 10, 8, 8, 9, 0, 9, -2, 8, -3, 7, -3, 1)

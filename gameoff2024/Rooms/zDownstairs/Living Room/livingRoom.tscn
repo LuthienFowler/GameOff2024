@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://86yppwd6kfaw"]
+[gd_scene load_steps=14 format=3 uid="uid://86yppwd6kfaw"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_2b02h"]
 [ext_resource type="Script" path="res://Rooms/zDownstairs/Living Room/living_room.gd" id="2_032g0"]
@@ -19,6 +19,13 @@ height = 78.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvver"]
 size = Vector2(68, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onswl"]
+size = Vector2(97, 91)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dfgba"]
+radius = 4.0
+height = 134.0
 
 [node name="Room" instance=ExtResource("1_2b02h")]
 script = ExtResource("2_032g0")
@@ -51,6 +58,9 @@ collision_mask = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
 polygon = PackedVector2Array(309, 212, 442, 212, 442, 166, 760, 166, 760, 216, 809, 216, 809, 280, 760, 280, 760, 402, 687, 402, 687, 373, 442, 373, 442, 262, 309, 262, 309, 213, 290, 425, 904, 445, 885, 48, 300, 61)
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Barriers" index="1"]
+polygon = PackedVector2Array(442, 311, 442, 314, 557, 314, 557, 311)
+
 [node name="ToTheLounge" parent="AllRoomTransitionAreas" index="0" instance=ExtResource("6_sdu6c")]
 position = Vector2(730, 387)
 next_room_path = "res://Rooms/zDownstairs/Lounge/loungeRoom.tscn"
@@ -77,3 +87,24 @@ interactable_name = "fire_place"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionAreas/FirePlace" index="0"]
 position = Vector2(5, 13)
 shape = SubResource("RectangleShape2D_hvver")
+
+[node name="Bookshelves" parent="InteractionAreas" index="1" instance=ExtResource("7_kstpm")]
+position = Vector2(602, 94)
+interactable_name = "bookshelf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionAreas/Bookshelves" index="0"]
+position = Vector2(-105.5, 26.5)
+shape = SubResource("RectangleShape2D_onswl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionAreas/Bookshelves" index="1"]
+position = Vector2(103.5, 26.5)
+shape = SubResource("RectangleShape2D_onswl")
+
+[node name="Couch" parent="InteractionAreas" index="2" instance=ExtResource("7_kstpm")]
+position = Vector2(555, 185)
+interactable_name = "couch"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionAreas/Couch" index="0"]
+position = Vector2(47, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dfgba")

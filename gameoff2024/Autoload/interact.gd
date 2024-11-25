@@ -1,7 +1,14 @@
 extends Node
 
 # Hehehe now for the sacriligious shit
+
+## Living Room ##
 var fire_place_interactions = 0
+var book_shelf_interactions = 0
+var couch_1_interactions = 0
+
+## Lounge ##
+var sus_plant_interactions = 0
 
 signal interacted(interactable_name)
 

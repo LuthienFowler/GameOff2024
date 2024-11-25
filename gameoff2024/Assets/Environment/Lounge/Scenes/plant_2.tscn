@@ -27,4 +27,4 @@ autoplay = "default"
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-4, 0, 5, 0, 8, -3, 9, -5, 9, -10, 5, -11, -7, -11, -9, -9, -9, -7, -8, -4)
+polygon = PackedVector2Array(-4, 0, 5, 0, 8, -3, 9, -5, 9, -6, 5, -6, -5, -6, -8, -6, -8, -5, -8, -4)
