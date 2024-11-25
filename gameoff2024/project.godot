@@ -39,6 +39,9 @@ directories/dtl_directory={
 "empty_book_shelves_1": "res://Dialogue/Timelines/LivingRoom/empty_book_shelves_1.dtl",
 "empty_book_shelves_2": "res://Dialogue/Timelines/LivingRoom/empty_book_shelves_2.dtl",
 "fire_place_dialogue_1": "res://Dialogue/Timelines/LivingRoom/fire_place_dialogue_1.dtl",
+"kitchen_dialogue_1": "res://Dialogue/Timelines/DiningRoom/kitchen_dialogue_1.dtl",
+"kitchen_dialogue_2": "res://Dialogue/Timelines/DiningRoom/kitchen_dialogue_2.dtl",
+"stairs_dialogue": "res://Dialogue/Timelines/LivingRoom/stairs_dialogue.dtl",
 "suspicious_plant_1": "res://Dialogue/Timelines/Lounge/suspicious_plant_1.dtl",
 "suspicious_plant_2": "res://Dialogue/Timelines/Lounge/suspicious_plant_2.dtl",
 "suspicious_plant_3": "res://Dialogue/Timelines/Lounge/suspicious_plant_3.dtl"

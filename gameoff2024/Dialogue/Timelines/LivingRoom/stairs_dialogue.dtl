@@ -1,0 +1,6 @@
+[signal arg="start"]
+I shake the door at the top.
+...
+It doesn't budge.
+Oh well.
+[signal arg="end"]

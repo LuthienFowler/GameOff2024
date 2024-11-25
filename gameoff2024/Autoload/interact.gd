@@ -6,6 +6,7 @@ extends Node
 var fire_place_interactions = 0
 var book_shelf_interactions = 0
 var couch_1_interactions = 0
+var try_go_upstairs = false
 
 ## Lounge ##
 var sus_plant_interactions = 0

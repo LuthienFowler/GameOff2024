@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://86yppwd6kfaw"]
+[gd_scene load_steps=15 format=3 uid="uid://86yppwd6kfaw"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_2b02h"]
 [ext_resource type="Script" path="res://Rooms/zDownstairs/Living Room/living_room.gd" id="2_032g0"]
@@ -26,6 +26,9 @@ size = Vector2(97, 91)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dfgba"]
 radius = 4.0
 height = 134.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4wlw"]
+size = Vector2(44, 39.5)
 
 [node name="Room" instance=ExtResource("1_2b02h")]
 script = ExtResource("2_032g0")
@@ -108,3 +111,14 @@ interactable_name = "couch"
 position = Vector2(47, 3)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_dfgba")
+
+[node name="Stairs(Not Interaction)" type="Area2D" parent="InteractionAreas" index="3"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionAreas/Stairs(Not Interaction)" index="0"]
+position = Vector2(420, 355.25)
+shape = SubResource("RectangleShape2D_p4wlw")
+
+[connection signal="area_entered" from="InteractionAreas/Stairs(Not Interaction)" to="DialogueHandler" method="_on_stairs_not_interaction_area_entered"]
+[connection signal="area_exited" from="InteractionAreas/Stairs(Not Interaction)" to="DialogueHandler" method="_on_stairs_not_interaction_area_exited"]

@@ -1,0 +1,8 @@
+[signal arg="start"]
+I tried the handle.
+...
+It didn't open.
+I tried to kick in the door.
+That didn't do anything either.
+Oh well, there are other places to look.
+[signal arg="end"]

@@ -31,3 +31,16 @@ func couch_dialogue() -> void:
 		Interact.interact("couch_dialogue_2")
 	
 	Interact.couch_1_interactions += 1 
+
+####################################################################################################
+
+var stairs_dialogue_started = false
+
+func _on_stairs_not_interaction_area_entered(area: Area2D) -> void:
+	if !stairs_dialogue_started and area.is_in_group("PlayerInteractionAreas"):
+		stairs_dialogue_started = true
+		Interact.try_go_upstairs = true
+		Interact.interact("stairs_dialogue") 
+
+func _on_stairs_not_interaction_area_exited(area: Area2D) -> void:
+	stairs_dialogue_started = false
