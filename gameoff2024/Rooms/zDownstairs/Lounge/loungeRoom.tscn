@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cgepgjckrd0v7" path="res://Assets/Environment/Bases/Downstairs/LoungeRoomBase.png" id="2_1la32"]
 [ext_resource type="Script" path="res://Rooms/zDownstairs/Lounge/lounge_room.gd" id="2_w005w"]
 [ext_resource type="PackedScene" uid="uid://bu7n4wdcskf8c" path="res://Rooms/RoomTransitionArea/transition_area.tscn" id="3_82qen"]
-[ext_resource type="PackedScene" uid="uid://c5ykor1quhy6x" path="res://Assets/Environment/Lounge/Scenes/plant_1.tscn" id="5_6sdo4"]
+[ext_resource type="PackedScene" uid="uid://c5ykor1quhy6x" path="res://Assets/Environment/Lounge/Scenes/Plant/plant_1.tscn" id="5_6sdo4"]
 [ext_resource type="PackedScene" uid="uid://cjf3f53nmjwg5" path="res://Assets/Environment/Lounge/Scenes/lounge_couch.tscn" id="5_eq67v"]
 [ext_resource type="PackedScene" uid="uid://dseif7wapnnt5" path="res://Assets/Environment/Lounge/Scenes/plant_2.tscn" id="6_41xki"]
 [ext_resource type="Script" path="res://Rooms/zDownstairs/Lounge/dialogue_handler.gd" id="7_p0h1a"]
@@ -56,6 +56,7 @@ position = Vector2(103, 424)
 
 [node name="suspicious_plant" parent="RoomContents" index="5" instance=ExtResource("5_6sdo4")]
 position = Vector2(294, 526)
+is_interactable = true
 
 [node name="DialogueHandler" parent="." index="2"]
 script = ExtResource("7_p0h1a")
@@ -111,3 +112,10 @@ interactable_name = "lounge_couch"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/lounge_couch" index="0"]
 polygon = PackedVector2Array(109, -2, 109, 19, -17, 19, -34, 37, -35, 38, -34, 43, -33, 56, -32, 78, -54, 78, -54, 65, -53, 17, -33, 3)
+
+[node name="InteractionArea" parent="InteractionAreas" index="2" instance=ExtResource("8_xlcpq")]
+position = Vector2(435, 333)
+interactable_name = "leafy_plant"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/InteractionArea" index="0"]
+polygon = PackedVector2Array(-4, -5, -5, -4, -6, -1, -6, 5, -3, 7, 5, 7, 7, 6, 8, 4, 8, 0, 7, -1, 6, -2, 5, -2, 5, -5)

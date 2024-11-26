@@ -10,6 +10,7 @@ var try_go_upstairs = false
 
 ## Lounge ##
 var sus_plant_interactions = 0
+var leaf_torn = false
 
 ####################################################################################################
 
