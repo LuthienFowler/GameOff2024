@@ -9,6 +9,10 @@ func interact(interactable_name) -> void:
 			sus_plant_dialogue()
 		"lounge_couch":
 			lounge_couch_dialogue()
+		"leafy_plant":
+			leafy_plant_dialogue()
+		"spider_plant":
+			spider_plant_dialogue()
 
 func sus_plant_dialogue() -> void:
 	if Interact.sus_plant_interactions == 0:
@@ -22,3 +26,9 @@ func sus_plant_dialogue() -> void:
 
 func lounge_couch_dialogue() -> void:
 	Interact.interact("lounge_couch_dialogue")
+
+func leafy_plant_dialogue() -> void:
+	Interact.interact("leafy_plant")
+
+func spider_plant_dialogue() -> void:
+	Interact.interact("spider_plant")

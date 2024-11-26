@@ -43,6 +43,7 @@ directories/dtl_directory={
 "kitchen_dialogue_2": "res://Dialogue/Timelines/DiningRoom/kitchen_dialogue_2.dtl",
 "leafy_plant": "res://Dialogue/Timelines/Lounge/leafy_plant.dtl",
 "lounge_couch_dialogue": "res://Dialogue/Timelines/Lounge/lounge_couch_dialogue.dtl",
+"spider_plant": "res://Dialogue/Timelines/Lounge/spider_plant.dtl",
 "stairs_dialogue": "res://Dialogue/Timelines/LivingRoom/stairs_dialogue.dtl",
 "suspicious_plant_1": "res://Dialogue/Timelines/Lounge/suspicious_plant_1.dtl",
 "suspicious_plant_2": "res://Dialogue/Timelines/Lounge/suspicious_plant_2.dtl",
