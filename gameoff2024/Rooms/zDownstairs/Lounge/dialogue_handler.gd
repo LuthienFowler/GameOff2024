@@ -13,6 +13,8 @@ func interact(interactable_name) -> void:
 			leafy_plant_dialogue()
 		"spider_plant":
 			spider_plant_dialogue()
+		"tv":
+			tv_dialogue()
 
 func sus_plant_dialogue() -> void:
 	if Interact.sus_plant_interactions == 0:
@@ -32,3 +34,6 @@ func leafy_plant_dialogue() -> void:
 
 func spider_plant_dialogue() -> void:
 	Interact.interact("spider_plant")
+
+func tv_dialogue() -> void:
+	pass

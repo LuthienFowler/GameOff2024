@@ -51,7 +51,11 @@ directories/dtl_directory={
 "suspicious_plant_2": "res://Dialogue/Timelines/Lounge/suspicious_plant_2.dtl",
 "suspicious_plant_3": "res://Dialogue/Timelines/Lounge/suspicious_plant_3.dtl",
 "tripod_1": "res://Dialogue/Timelines/SamanthasStudy/tripod_1.dtl",
-"tripod_2": "res://Dialogue/Timelines/SamanthasStudy/tripod_2.dtl"
+"tripod_2": "res://Dialogue/Timelines/SamanthasStudy/tripod_2.dtl",
+"tv_1": "res://Dialogue/Timelines/Lounge/tv_1.dtl",
+"tv_2": "res://Dialogue/Timelines/Lounge/tv_2.dtl",
+"tv_3": "res://Dialogue/Timelines/Lounge/tv_3.dtl",
+"tv_4": "res://Dialogue/Timelines/Lounge/tv_4.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogue/Styles/new_style.tres"]

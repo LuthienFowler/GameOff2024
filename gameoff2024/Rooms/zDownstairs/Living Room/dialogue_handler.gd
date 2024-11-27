@@ -42,5 +42,5 @@ func _on_stairs_not_interaction_area_entered(area: Area2D) -> void:
 		Interact.try_go_upstairs = true
 		Interact.interact("stairs_dialogue") 
 
-func _on_stairs_not_interaction_area_exited(area: Area2D) -> void:
+func _on_stairs_not_interaction_area_exited(_area: Area2D) -> void:
 	stairs_dialogue_started = false

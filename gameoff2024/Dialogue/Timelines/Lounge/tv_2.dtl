@@ -1,0 +1,9 @@
+[signal arg="start"]
+I reach behind the tv, looking for the on button.
+*Click*
+[signal arg="static_on"]
+...
+Nothing but static.
+A chill went down my spine.
+I must be scaring myself again...
+[signal arg="end"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5i6hfgd2kj4l"]
+
+[ext_resource type="Texture2D" uid="uid://boena74i3ue05" path="res://Assets/Environment/Lounge/Pictures/LoungeItemsFinalLikeActually.png" id="1_fi22c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jltl"]
+atlas = ExtResource("1_fi22c")
+region = Rect2(375, 125, 125, 125)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3mg85"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jltl")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="tv" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(13, -24)
+sprite_frames = SubResource("SpriteFrames_3mg85")
+animation = &"new_animation"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-22, 0, -22, -30, -22, -48, 23, -48, 23, -31, 23, 0)

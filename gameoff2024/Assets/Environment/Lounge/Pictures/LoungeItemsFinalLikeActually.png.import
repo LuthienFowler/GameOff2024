@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1mt05e3y2kfc"
-path="res://.godot/imported/LoungeItemsFixed.png-6cdd0c7df2f3134bebef8a03cf5f7965.ctex"
+uid="uid://boena74i3ue05"
+path="res://.godot/imported/LoungeItemsFinalLikeActually.png-c9f9e0b1206320a647b43ff2b0225122.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/Lounge/Pictures/LoungeItemsFixed.png"
-dest_files=["res://.godot/imported/LoungeItemsFixed.png-6cdd0c7df2f3134bebef8a03cf5f7965.ctex"]
+source_file="res://Assets/Environment/Lounge/Pictures/LoungeItemsFinalLikeActually.png"
+dest_files=["res://.godot/imported/LoungeItemsFinalLikeActually.png-c9f9e0b1206320a647b43ff2b0225122.ctex"]
 
 [params]
 

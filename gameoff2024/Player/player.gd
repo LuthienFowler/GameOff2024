@@ -63,10 +63,12 @@ func frict(delta):
 
 func play_anims():
 	
-	if Global.current_game_state != Global.game_states.PLAY:
-		return
-	
 	var current_anim: String
+	
+	if Global.current_game_state != Global.game_states.PLAY:
+		current_anim = "idle_" + idle_anim
+		animated_sprite_2d.play(current_anim)
+		return
 
 	if Input.is_action_pressed("down"):
 		current_anim = "walk_foreward"

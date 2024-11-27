@@ -7,6 +7,10 @@ func interact(interactable_name) -> void:
 	match interactable_name:
 		"tripod":
 			run_tripod_dialogue()
+		"green_screen":
+			run_green_screen_dialogue()
+		"samantha_couch":
+			run_couch_dialogue()
 
 func run_tripod_dialogue() -> void:
 	if Interact.tripod_interactions == 0:

@@ -1,35 +1,35 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5ykor1quhy6x"]
 
-[ext_resource type="Texture2D" uid="uid://ctfy6575gd3kn" path="res://Assets/Environment/Lounge/Pictures/LoungeItemsLikeActuallyFixed.png" id="1_c3n7y"]
 [ext_resource type="Script" path="res://Assets/Environment/Lounge/Scenes/Plant/plant_1.gd" id="1_p4p7q"]
+[ext_resource type="Texture2D" uid="uid://boena74i3ue05" path="res://Assets/Environment/Lounge/Pictures/LoungeItemsFinalLikeActually.png" id="2_3mvid"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nfaui"]
-atlas = ExtResource("1_c3n7y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mxwt"]
+atlas = ExtResource("2_3mvid")
 region = Rect2(300, 0, 50, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_whts8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nfaui")
+"texture": SubResource("AtlasTexture_5mxwt")
 }],
 "loop": true,
 "name": &"new_animation",
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fisly"]
-atlas = ExtResource("1_c3n7y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aru2"]
+atlas = ExtResource("2_3mvid")
 region = Rect2(300, 100, 50, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h024w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fisly")
+"texture": SubResource("AtlasTexture_7aru2")
 }],
 "loop": true,
-"name": &"default",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -40,7 +40,6 @@ script = ExtResource("1_p4p7q")
 position = Vector2(5, -39)
 sprite_frames = SubResource("SpriteFrames_whts8")
 animation = &"new_animation"
-autoplay = "new_animation"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -50,3 +49,4 @@ polygon = PackedVector2Array(-4, 0, 4, 0, 6, -1, 7, -3, 7, -7, 6, -8, 5, -9, 4, 
 [node name="torn" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -18)
 sprite_frames = SubResource("SpriteFrames_h024w")
+animation = &"new_animation"

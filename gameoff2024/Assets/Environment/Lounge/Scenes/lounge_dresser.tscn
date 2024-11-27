@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp0u5mpb33ad6"]
+
+[ext_resource type="Texture2D" uid="uid://boena74i3ue05" path="res://Assets/Environment/Lounge/Pictures/LoungeItemsFinalLikeActually.png" id="1_637l8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw5fs"]
+atlas = ExtResource("1_637l8")
+region = Rect2(0, 250, 166, 125)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_agd41"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aw5fs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_at6ob"]
+size = Vector2(109, 69)
+
+[node name="lounge_dresser" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, -32)
+sprite_frames = SubResource("SpriteFrames_agd41")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, -34.5)
+shape = SubResource("RectangleShape2D_at6ob")
