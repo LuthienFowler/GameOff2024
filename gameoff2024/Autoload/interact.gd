@@ -12,6 +12,9 @@ var try_go_upstairs = false
 var sus_plant_interactions = 0
 var leaf_torn = false
 
+## Samantha's Study ##
+var tripod_interactions = 0
+
 ####################################################################################################
 
 signal interacted(interactable_name)

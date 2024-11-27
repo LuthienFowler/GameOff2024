@@ -113,9 +113,20 @@ interactable_name = "lounge_couch"
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/lounge_couch" index="0"]
 polygon = PackedVector2Array(109, -2, 109, 19, -17, 19, -34, 37, -35, 38, -34, 43, -33, 56, -32, 78, -54, 78, -54, 65, -53, 17, -33, 3)
 
-[node name="InteractionArea" parent="InteractionAreas" index="2" instance=ExtResource("8_xlcpq")]
+[node name="leafy_plant" parent="InteractionAreas" index="2" instance=ExtResource("8_xlcpq")]
 position = Vector2(435, 333)
 interactable_name = "leafy_plant"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/InteractionArea" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/leafy_plant" index="0"]
 polygon = PackedVector2Array(-4, -5, -5, -4, -6, -1, -6, 5, -3, 7, 5, 7, 7, 6, 8, 4, 8, 0, 7, -1, 6, -2, 5, -2, 5, -5)
+
+[node name="spider_plant" parent="InteractionAreas" index="3" instance=ExtResource("8_xlcpq")]
+position = Vector2(103, 418)
+interactable_name = "spider_plant"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/spider_plant" index="0"]
+polygon = PackedVector2Array(-8, 0, 9, 0, 9, 1, 8, 3, 7, 4, 6, 5, 5, 6, -4, 6, -8, 2)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="InteractionAreas/spider_plant" index="1"]
+position = Vector2(533, 77)
+polygon = PackedVector2Array(-8, 0, 9, 0, 9, 1, 8, 3, 7, 4, 6, 5, 5, 6, -4, 6, -8, 2)

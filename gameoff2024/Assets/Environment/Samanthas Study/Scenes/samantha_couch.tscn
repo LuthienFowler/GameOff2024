@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://48e23amg58he"]
+
+[ext_resource type="Texture2D" uid="uid://drfgxqkegniqd" path="res://Assets/Environment/Samanthas Study/Pictures/SamanthasStudyItems.png" id="1_a0hpb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a8vr"]
+atlas = ExtResource("1_a0hpb")
+region = Rect2(250, 66, 250, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anqxt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a8vr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SamanthaCouch" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_anqxt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-50, -8, -55, -12, -64, -12, -69, -8, -69, -3, -66, 0, -64, 1, -62, 2, -60, 3, -58, 4, -52, 11, -49, 11, -49, 19, -50, 19, -51, 22, -51, 24, -49, 25, -47, 25, -44, 23, -44, 19, -43, 19, -41, 19, -39, 15, -38, 12, -38, 10, -27, 10, -27, 11, 14, 11, 14, 12, 33, 12, 33, 11, 54, 11, 54, 10, 59, 10, 59, 12, 61, 16, 63, 18, 64, 18, 64, 22, 65, 24, 68, 24, 68, 23, 70, 23, 70, 19, 69, 10, 70, 10, 72, 8, 73, 5, 74, 4, 78, 1, 82, -1, 84, -5, 84, -11, 81, -14, 73, -14, 68, -12, 64, -8, 64, -21, 61, -23, 11, -23, 9, -21, 9, -19, 6, -19, 5, -22, 2, -23, -43, -23, -48, -22, -50, -18)

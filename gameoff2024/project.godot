@@ -39,15 +39,19 @@ directories/dtl_directory={
 "empty_book_shelves_1": "res://Dialogue/Timelines/LivingRoom/empty_book_shelves_1.dtl",
 "empty_book_shelves_2": "res://Dialogue/Timelines/LivingRoom/empty_book_shelves_2.dtl",
 "fire_place_dialogue_1": "res://Dialogue/Timelines/LivingRoom/fire_place_dialogue_1.dtl",
+"green_screen": "res://Dialogue/Timelines/SamanthasStudy/green_screen.dtl",
 "kitchen_dialogue_1": "res://Dialogue/Timelines/DiningRoom/kitchen_dialogue_1.dtl",
 "kitchen_dialogue_2": "res://Dialogue/Timelines/DiningRoom/kitchen_dialogue_2.dtl",
 "leafy_plant": "res://Dialogue/Timelines/Lounge/leafy_plant.dtl",
 "lounge_couch_dialogue": "res://Dialogue/Timelines/Lounge/lounge_couch_dialogue.dtl",
+"samantha_couch": "res://Dialogue/Timelines/SamanthasStudy/samantha_couch.dtl",
 "spider_plant": "res://Dialogue/Timelines/Lounge/spider_plant.dtl",
 "stairs_dialogue": "res://Dialogue/Timelines/LivingRoom/stairs_dialogue.dtl",
 "suspicious_plant_1": "res://Dialogue/Timelines/Lounge/suspicious_plant_1.dtl",
 "suspicious_plant_2": "res://Dialogue/Timelines/Lounge/suspicious_plant_2.dtl",
-"suspicious_plant_3": "res://Dialogue/Timelines/Lounge/suspicious_plant_3.dtl"
+"suspicious_plant_3": "res://Dialogue/Timelines/Lounge/suspicious_plant_3.dtl",
+"tripod_1": "res://Dialogue/Timelines/SamanthasStudy/tripod_1.dtl",
+"tripod_2": "res://Dialogue/Timelines/SamanthasStudy/tripod_2.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogue/Styles/new_style.tres"]

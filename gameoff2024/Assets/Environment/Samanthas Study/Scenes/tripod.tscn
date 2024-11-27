@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7qwloi86uk1s"]
+
+[ext_resource type="Texture2D" uid="uid://drfgxqkegniqd" path="res://Assets/Environment/Samanthas Study/Pictures/SamanthasStudyItems.png" id="1_6w4xn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0lfj"]
+atlas = ExtResource("1_6w4xn")
+region = Rect2(83, 71, 83, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jp227"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0lfj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tripod" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -18)
+sprite_frames = SubResource("SpriteFrames_jp227")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-20, 0, 19, 0, 20, 0, 19, -2, 9, -10, -10, -10, -21, -1)

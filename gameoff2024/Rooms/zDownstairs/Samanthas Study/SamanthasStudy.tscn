@@ -1,12 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmqbu2htfhon1"]
+[gd_scene load_steps=11 format=3 uid="uid://bmqbu2htfhon1"]
 
 [ext_resource type="PackedScene" uid="uid://bvk3hw7fqycxa" path="res://Rooms/Base/room.tscn" id="1_uw1iv"]
 [ext_resource type="Texture2D" uid="uid://b1yywn7yiryav" path="res://Assets/Environment/Bases/Downstairs/RecordingRoomBase.png" id="2_fvswh"]
 [ext_resource type="PackedScene" uid="uid://bu7n4wdcskf8c" path="res://Rooms/RoomTransitionArea/transition_area.tscn" id="3_00ka2"]
+[ext_resource type="PackedScene" uid="uid://b7qwloi86uk1s" path="res://Assets/Environment/Samanthas Study/Scenes/tripod.tscn" id="3_ti1v5"]
+[ext_resource type="Script" path="res://Rooms/zDownstairs/Samanthas Study/dialogue_handler.gd" id="4_bme5c"]
+[ext_resource type="PackedScene" uid="uid://bvttedwp0435w" path="res://Assets/Environment/Samanthas Study/Scenes/green_screen.tscn" id="4_p1yia"]
+[ext_resource type="PackedScene" uid="uid://48e23amg58he" path="res://Assets/Environment/Samanthas Study/Scenes/samantha_couch.tscn" id="5_2fel4"]
+[ext_resource type="PackedScene" uid="uid://hf46rddrhjos" path="res://Interactions/InteractionArea/interaction_area.tscn" id="5_jfwr4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6o07w"]
 radius = 15.0
 height = 108.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6n44v"]
+radius = 5.0
 
 [node name="Room" instance=ExtResource("1_uw1iv")]
 
@@ -19,9 +27,21 @@ position = Vector2(630, 383)
 
 [node name="Camera2D" parent="RoomContents/Player" index="5"]
 limit_left = 233
-limit_top = 157
+limit_top = 59
 limit_right = 680
 limit_bottom = 582
+
+[node name="Tripod" parent="RoomContents" index="1" instance=ExtResource("3_ti1v5")]
+position = Vector2(355, 359)
+
+[node name="green_screen" parent="RoomContents" index="2" instance=ExtResource("4_p1yia")]
+position = Vector2(276, 333)
+
+[node name="SamanthaCouch" parent="RoomContents" index="3" instance=ExtResource("5_2fel4")]
+position = Vector2(408, 154)
+
+[node name="DialogueHandler" parent="." index="2"]
+script = ExtResource("4_bme5c")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers" index="0"]
 polygon = PackedVector2Array(704, 347, 704, 423, 600, 423, 600, 582, 233, 582, 233, 157, 600, 157, 600, 346, 704, 346, 575, 34, 100, 179, 212, 699, 740, 608, 747, 347)
@@ -33,3 +53,19 @@ current_room = "samanthas_study"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AllRoomTransitionAreas/TransitionArea" index="0"]
 shape = SubResource("CapsuleShape2D_6o07w")
+
+[node name="tripod" parent="InteractionAreas" index="0" instance=ExtResource("5_jfwr4")]
+position = Vector2(351, 345)
+interactable_name = "tripod"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionAreas/tripod" index="0"]
+position = Vector2(3, 9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6n44v")
+
+[node name="green_screen" parent="InteractionAreas" index="1" instance=ExtResource("5_jfwr4")]
+position = Vector2(269, 329)
+interactable_name = "green_screen"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InteractionAreas/green_screen" index="0"]
+polygon = PackedVector2Array(24, 6, 22, 3, 9, -12, -5, -19, -12, -19, -16, -18, -24, -12, -24, 0, -18, 8, -4, 19, 5, 21, 16, 21, 24, 12)
