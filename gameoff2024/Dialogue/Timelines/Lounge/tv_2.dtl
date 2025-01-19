@@ -1,5 +1,6 @@
 [signal arg="start"]
 I reach behind the tv, looking for the on button.
+[signal arg="click"]
 *Click*
 [signal arg="static_on"]
 ...

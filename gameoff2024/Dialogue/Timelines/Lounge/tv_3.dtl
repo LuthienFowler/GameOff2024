@@ -2,6 +2,7 @@
 I reach back to turn the tv off...
 My eyes fall onto the plug that lay on the floor.
 Not plugged in.
+[signal arg="click"]
 *Click*
 [signal arg="static_off"]
 [signal arg="end"]

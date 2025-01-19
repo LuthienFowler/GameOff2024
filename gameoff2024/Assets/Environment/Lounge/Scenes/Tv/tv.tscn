@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5i6hfgd2kj4l"]
+[gd_scene load_steps=7 format=3 uid="uid://b5i6hfgd2kj4l"]
 
 [ext_resource type="Texture2D" uid="uid://boena74i3ue05" path="res://Assets/Environment/Lounge/Pictures/LoungeItemsFinalLikeActually.png" id="1_fi22c"]
+[ext_resource type="Script" path="res://Assets/Environment/Lounge/Scenes/Tv/sound_handler.gd" id="2_i8jgv"]
+[ext_resource type="AudioStream" uid="uid://4e4k2o7ctq21" path="res://Assets/Environment/Lounge/Sounds/old-tv-button-102956.mp3" id="3_xywt7"]
+[ext_resource type="AudioStream" uid="uid://blshikrg7462x" path="res://Assets/Environment/Lounge/Sounds/tv-static-6411.mp3" id="4_3d81c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4jltl"]
 atlas = ExtResource("1_fi22c")
@@ -28,3 +31,13 @@ animation = &"new_animation"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-22, 0, -22, -30, -22, -48, 23, -48, 23, -31, 23, 0)
+
+[node name="SoundHandler" type="Node2D" parent="."]
+script = ExtResource("2_i8jgv")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="SoundHandler"]
+stream = ExtResource("3_xywt7")
+
+[node name="Static" type="AudioStreamPlayer2D" parent="SoundHandler"]
+stream = ExtResource("4_3d81c")
+volume_db = -25.333

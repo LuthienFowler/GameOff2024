@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5ykor1quhy6x" path="res://Assets/Environment/Lounge/Scenes/Plant/plant_1.tscn" id="5_6sdo4"]
 [ext_resource type="PackedScene" uid="uid://cjf3f53nmjwg5" path="res://Assets/Environment/Lounge/Scenes/lounge_couch.tscn" id="5_eq67v"]
 [ext_resource type="PackedScene" uid="uid://dseif7wapnnt5" path="res://Assets/Environment/Lounge/Scenes/plant_2.tscn" id="6_41xki"]
-[ext_resource type="PackedScene" uid="uid://b5i6hfgd2kj4l" path="res://Assets/Environment/Lounge/Scenes/tv.tscn" id="7_khldc"]
+[ext_resource type="PackedScene" uid="uid://b5i6hfgd2kj4l" path="res://Assets/Environment/Lounge/Scenes/Tv/tv.tscn" id="7_khldc"]
 [ext_resource type="Script" path="res://Rooms/zDownstairs/Lounge/dialogue_handler.gd" id="7_p0h1a"]
 [ext_resource type="PackedScene" uid="uid://hf46rddrhjos" path="res://Interactions/InteractionArea/interaction_area.tscn" id="8_xlcpq"]
 [ext_resource type="PackedScene" uid="uid://cp0u5mpb33ad6" path="res://Assets/Environment/Lounge/Scenes/lounge_dresser.tscn" id="11_5cijw"]

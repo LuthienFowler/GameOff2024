@@ -36,4 +36,9 @@ func spider_plant_dialogue() -> void:
 	Interact.interact("spider_plant")
 
 func tv_dialogue() -> void:
-	pass
+	if Interact.tv_interactions <= 3:
+		Interact.interact("tv_" + str((Interact.tv_interactions + 1)))
+	elif Interact.tv_interactions > 3:
+		Interact.interact("tv_4")
+		
+	Interact.tv_interactions += 1

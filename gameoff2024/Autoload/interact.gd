@@ -1,6 +1,6 @@
 extends Node
 
-# NOTE: For my next project put plotpoint vars into seperate autoload script
+# NOTE: For my next project put storybeat vars into seperate autoload script
 
 ## Living Room ##
 var fire_place_interactions = 0
@@ -10,6 +10,7 @@ var try_go_upstairs = false
 
 ## Lounge ##
 var sus_plant_interactions = 0
+var tv_interactions = 0
 var leaf_torn = false
 
 ## Samantha's Study ##
